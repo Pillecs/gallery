@@ -4,8 +4,8 @@ date: 2024-09-11
 title: Line Art
 sort_by: date # Exif.Date
 sort_order: desc
-featured: true
-private: true # do not show in list, only as feature
+featured: false
+private: false # do not show in list, only as feature
 # description: This is a featured album. It is private, so it is only shown on the homepage.
 ---
 
