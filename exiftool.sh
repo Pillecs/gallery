@@ -1,1 +1,2 @@
-exiftool -ImageDescription="Brown tabby cat on white stairs by Alexander London" content/LineArt/Ciri.png
+exiftool -ImageDescription="
+Ciri, whose full name is Cirilla Fiona Elen Riannon, is one of the main characters in The Witcher 3: Wild Hunt. She is the adopted daughter of Geralt of Rivia and Yennefer of Vengerberg." content/LineArt/Ciri.png
