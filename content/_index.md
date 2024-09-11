@@ -1,8 +1,8 @@
 ---
-description: An example site for hugo-theme-gallery. Images from Unsplash.
+description: Everything that lives is designed to end. We are perpetually trapped...in a never-ending spiral of life and death.
 #lastmod: 2023-07-05
-title: Hugo Gallery
-featured_image: martin-martz-wRuhOOaG-Z4-unsplash.jpg # default: first image in this directory
+title: Pillecs Gallery
+# featured_image: martin-martz-wRuhOOaG-Z4-unsplash.jpg # default: first image in this directory
 # featured_image on the home page is used for OpenGraph cards, etc.
 menus:
   main:
