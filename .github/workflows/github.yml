@@ -52,12 +52,12 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
-          
+
       - name: exiftool
         run: |
-            apt-get install exiftool dos2unix
-            dos2unix exiftool.sh
-            sh exiftool.sh
+            sudo apt-get install exiftool dos2unix
+            sudo dos2unix exiftool.sh
+            sudo sh exiftool.sh
             
       - name: Build Hugo site
         run: |
