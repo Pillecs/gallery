@@ -3,10 +3,15 @@
 <link rel="stylesheet" href="{{ $searchCSS.RelPermalink }}" />
 {{ $searchJS := partial "search/assets/js-resource" . | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $searchJS.RelPermalink }}" defer></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGJN4GFD39"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-KGJN4GFD39"
+></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KGJN4GFD39');
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'G-KGJN4GFD39')
 </script>
