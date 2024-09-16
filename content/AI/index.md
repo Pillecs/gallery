@@ -6,5 +6,5 @@ sort_by: date # Exif.Date
 sort_order: desc
 featured: true
 private: false # do not show in list, only as feature
-# description: This is a featured album. It is private, so it is only shown on the homepage.
+description: This album contains only AI-generated images, while all other albums do not feature any AI creations. The focus here is entirely on the creative possibilities of modern artificial intelligence.
 ---
