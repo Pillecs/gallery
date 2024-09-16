@@ -4,4 +4,5 @@ exiftool -ImageDescription="Ciri, whose full name is Cirilla Fiona Elen Riannon,
 exiftool -ImageDescription="Line art of an anime girl." content/LineArt/Faye.png
 
 # AI Art
-exiftool -ImageDescription="as" content/AI/ai_img0.jpg
+exiftool -ImageDescription="The image was created with the artificial intelligence of Deviantart. It was created as part of the 'Moon' challenge in August 2024. 
+" content/AI/ai_img0.jpg
