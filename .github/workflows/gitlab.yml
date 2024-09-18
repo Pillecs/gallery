@@ -1,0 +1,44 @@
+name: Sync all branches to GitLab
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code from GitHub
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Git 
+      run: |
+        EMAIL=$(echo c2tvcHAuZXJpay5nbWFpbC5jb20= | base64 --decode)
+        git config --global user.name "eskopp"
+        git config --global user.email "$EMAIL"
+
+    - name: Add GitLab remote
+      run: git remote add gitlab https://gitlab-ci-token:${{ secrets.GITLAB }}@gitlab.erik-skopp.de/pillecs/gallery.git
+
+    - name: Fetch from GitLab
+      run: git fetch gitlab
+
+    - name: Merge changes from GitLab
+      run: |
+        branch_name=$(echo "${GITHUB_REF#refs/heads/}")
+        git merge "gitlab/$branch_name" --allow-unrelated-histories || true
+
+    - name: Push to GitLab
+      run: |
+        branch_name=$(echo "${GITHUB_REF#refs/heads/}")
+        git push gitlab "refs/heads/$branch_name:refs/heads/$branch_name"
+        
+    - name: Push to GitLab (create branch if not exists)
+      run: |
+        branch_name=$(echo "${GITHUB_REF#refs/heads/}")
+        git push gitlab "refs/heads/$branch_name:refs/heads/$branch_name"
+        git push --tags gitlab
